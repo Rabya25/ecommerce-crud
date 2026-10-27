@@ -73,8 +73,11 @@ if(($_GET['action'] ?? '') === 'edit'){
   <body>
     <h1>Products</h1>
     <form method='POST'>
+         <label for="name">Name</label>
         <input type="text" name="name"  value="<?= $editing['name'] ?? '' ?>">
+        <label for="price">Price</label>
         <input type="number" name="price" value="<?= $editing['price'] ?? '' ?>">
+        <label for="stock">Stock</label>
         <input type="number" name="stock" value="<?= $editing['stock'] ?? '' ?>">
 
         <input type="hidden" name="action" value="<?= $editing ? 'update' : 'create' ?>">
